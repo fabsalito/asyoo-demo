@@ -13,7 +13,7 @@ p {
 }
 
 p.small {
-    font-size: 16px;
+    font-size: .8em;
 }
 
 p.description {
@@ -27,7 +27,7 @@ a:focus,
 a:active,
 a.active {
     outline: 0;
-    color: #18bc9c;
+    color: rgb(92, 151, 191);
 }
 
 h1,
@@ -37,8 +37,8 @@ h4,
 h5,
 h6 {
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
+    font-family: Coda, Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: normal;
 }
 
 hr.star-light,
@@ -47,13 +47,13 @@ hr.star-primary {
     padding: 0;
     max-width: 250px;
     border: 0;
-    border-top: solid 5px;
+    border-top: solid 3px;
     text-align: center;
 }
 
 hr.star-light:after,
 hr.star-primary:after {
-    content: "\f005";
+    content: "\f085"; /* fa-cogs */
     display: inline-block;
     position: relative;
     top: -.8em;
@@ -68,17 +68,15 @@ hr.star-light {
 
 hr.star-light:after {
     color: #fff;
-    /*background-color: #18bc9c;*/
-    /*background-color: rgba(104, 195, 163, .9);*/
     background-color: rgba(108, 122, 137, 1);
 }
 
 hr.star-primary {
-    border-color: #5C97BF;
+    border-color: rgb(92, 151, 191);
 }
 
 hr.star-primary:after {
-    color: #5C97BF;
+    color: rgb(92, 151, 191);
     background-color: #fff;
 }
 
@@ -92,7 +90,12 @@ header {
     /*background: #18bc9c;*/
     /*background-color: rgba(149, 165, 166, .9);*/
     /*background-color: rgba(104, 195, 163, .9);*/
-    background-color: rgba(108, 122, 137, 1);
+    /*background-color: rgba(108, 122, 137, 1);*/
+    background: url(../img/bg.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 header .container {
@@ -107,29 +110,31 @@ header img {
 
 header .intro-text .name {
     display: block;
-    text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 2em;
-    font-weight: 700;
+    /*text-transform: uppercase;*/
+    font-family: Coda, Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    /*font-size: 1em;*/
+    font-weight: normal;
 }
 
 header .intro-text .skills {
-    font-size: 1.25em;
-    font-weight: 300;
+    font-size: 1.2em;
+    font-weight: normal;
+    font-family: Coda, Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: normal;
 }
 
 @media(min-width:768px) {
     header .container {
-        padding-top: 200px;
-        padding-bottom: 100px;
+        padding-top: 100px;
+        padding-bottom: 25px;
     }
 
     header .intro-text .name {
-        font-size: 4.75em;
+        font-size: 4em;
     }
 
     header .intro-text .skills {
-        font-size: 1.75em;
+        font-size: 1.5em;
     }
 }
 
@@ -159,8 +164,8 @@ header .intro-text .skills {
 
 .navbar {
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
+    font-family: Coda, Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: normal;
 }
 
 .navbar a:focus {
@@ -169,6 +174,11 @@ header .intro-text .skills {
 
 .navbar .navbar-nav {
     letter-spacing: 1px;
+}
+
+.navbar .navbar-nav li {
+    font-family: Coda, Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: normal;
 }
 
 .navbar .navbar-nav li a:focus {
@@ -184,7 +194,7 @@ section {
     padding: 100px 0;
 }
 
-section h2 {
+section h3 {
     margin: 0;
     font-size: 3em;
 }
@@ -273,14 +283,13 @@ section.success a.active {
     margin-top: 15px;
     border: solid 2px #fff;
     font-size: 20px;
-    color: #fff;
+    color: rbga(92, 151, 191, 1);
     background: 0 0;
-    transition: all .3s ease-in-out;
 }
 
 .btn-outline:hover {
     border: solid 2px #fff;
-    color: #18bc9c;
+    color: rbga(92, 151, 191, .8);
     background: #fff;
 }
 
@@ -333,7 +342,7 @@ section.success a.active {
 }
 
 .floating-label-form-group-with-focus label {
-    color: #18bc9c;
+    color: rbg(92, 151, 191);
 }
 
 form .row:first-child .floating-label-form-group {
